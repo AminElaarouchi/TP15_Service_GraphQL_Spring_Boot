@@ -19,3 +19,17 @@ query { compteTransactions(id: 1) { id montant date type } transactionStats { co
 ```
 
 `solde` est le solde initial ; `soldeActuel` ajoute les dépôts et soustrait les retraits. `totalSolde` agrège les soldes actuels. Les retraits supérieurs au solde disponible sont refusés. Les dates utilisent `AAAA-MM-JJ` (les `/` sont aussi acceptés pour les exemples du TP). Les erreurs de compte introuvable ou de saisie invalide sont retournées en erreurs GraphQL explicites.
+
+## Résultat vérifié
+
+Commande exécutée le 3 novembre 2026 :
+
+```powershell
+mvn -B test
+```
+
+1 test d’intégration GraphQL réussi avec H2 (0 échec).
+
+![Résultat de la vérification dans le terminal](docs/verification-terminal.png)
+
+L’image est une transcription visuelle de la sortie réelle de vérification ; la capture native de la fenêtre du terminal n’était pas disponible dans cet environnement.
